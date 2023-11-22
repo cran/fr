@@ -1,0 +1,38 @@
+profile: tabular-data-resource
+name: my_mtcars
+path: my_mtcars.csv
+schema:
+  fields:
+    mpg:
+      name: mpg
+      type: number
+    cyl:
+      name: cyl
+      type: number
+    disp:
+      name: disp
+      type: number
+    hp:
+      name: hp
+      type: number
+    drat:
+      name: drat
+      type: number
+    wt:
+      name: wt
+      type: number
+    qsec:
+      name: qsec
+      type: number
+    vs:
+      name: vs
+      type: number
+    am:
+      name: am
+      type: number
+    gear:
+      name: gear
+      type: number
+    carb:
+      name: carb
+      type: number
