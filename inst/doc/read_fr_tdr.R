@@ -17,7 +17,7 @@ d_fr <- read_fr_tdr(fs::path_package("fr", "hamilton_poverty_2020"))
 d_fr
 
 ## -----------------------------------------------------------------------------
-d_fr@schema
+S7::prop(d_fr, "schema")
 
 ## -----------------------------------------------------------------------------
 lm(fraction_poverty ~ year, data = d_fr)
@@ -63,5 +63,5 @@ d_fr_new <-
 
 d_fr_new
 
-d_fr_new@schema
+S7::prop(d_fr_new, "schema")
 

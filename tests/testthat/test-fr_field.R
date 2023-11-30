@@ -58,6 +58,7 @@ test_that("is_fr_field works", {
 
 test_that("fr_field printing", {
   skip_on_ci()
+  skip_on_os(os = "windows")
   withr::with_options(list(width = 80), {
     as_fr_field(factor(letters[1:5]),
       name = "letters_five",

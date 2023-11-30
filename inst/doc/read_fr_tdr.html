@@ -349,7 +349,7 @@ named based on the <code>name</code> of the tdr) <em>and</em> a
 <code>tabular-data-resource.yaml</code> file, which contains the
 metadata descriptors:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>fs<span class="sc">::</span><span class="fu">dir_tree</span>(fs<span class="sc">::</span><span class="fu">path_package</span>(<span class="st">&quot;fr&quot;</span>, <span class="st">&quot;hamilton_poverty_2020&quot;</span>), <span class="at">recurse =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="co">#&gt; /private/var/folders/pg/q33bfwtj57d_v3vqpl7g26400000gn/T/RtmpIuos6t/Rinst8b5a223370cf/fr/hamilton_poverty_2020</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a><span class="co">#&gt; /private/var/folders/pg/q33bfwtj57d_v3vqpl7g26400000gn/T/Rtmph5jGZk/Rinst2f6154318440/fr/hamilton_poverty_2020</span></span>
 <span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="co">#&gt; ├── hamilton_poverty_2020.csv</span></span>
 <span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co">#&gt; └── tabular-data-resource.yaml</span></span></code></pre></div>
 <p>Read the <code>hamilton_poverty_2020</code> tdr into R by specifying
@@ -379,7 +379,7 @@ descriptors and the underlying data:</p>
 <span id="cb4-18"><a href="#cb4-18" tabindex="-1"></a><span class="co">#&gt; # ℹ 216 more rows</span></span></code></pre></div>
 <p>Print the <code>schema</code> property to view the table-specific
 metadata:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>d_fr<span class="sc">@</span>schema</span>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a>S7<span class="sc">::</span><span class="fu">prop</span>(d_fr, <span class="st">&quot;schema&quot;</span>)</span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="co">#&gt; census_tract_id_2020</span></span>
 <span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="co">#&gt; - type: string</span></span>
 <span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co">#&gt; - title: Census Tract Identifier</span></span>
@@ -509,7 +509,7 @@ Below is a simple example for <code>dplyr::left_join()</code>:</p>
 <span id="cb11-36"><a href="#cb11-36" tabindex="-1"></a><span class="co">#&gt; 10 39061022301           2020            0.247  1.25</span></span>
 <span id="cb11-37"><a href="#cb11-37" tabindex="-1"></a><span class="co">#&gt; # ℹ 216 more rows</span></span>
 <span id="cb11-38"><a href="#cb11-38" tabindex="-1"></a></span>
-<span id="cb11-39"><a href="#cb11-39" tabindex="-1"></a>d_fr_new<span class="sc">@</span>schema</span>
+<span id="cb11-39"><a href="#cb11-39" tabindex="-1"></a>S7<span class="sc">::</span><span class="fu">prop</span>(d_fr_new, <span class="st">&quot;schema&quot;</span>)</span>
 <span id="cb11-40"><a href="#cb11-40" tabindex="-1"></a><span class="co">#&gt; census_tract_id_2020</span></span>
 <span id="cb11-41"><a href="#cb11-41" tabindex="-1"></a><span class="co">#&gt; - type: string</span></span>
 <span id="cb11-42"><a href="#cb11-42" tabindex="-1"></a><span class="co">#&gt; - title: Census Tract Identifier</span></span>
