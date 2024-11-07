@@ -136,7 +136,6 @@ test_that("as_fr_tdr works with a .template supplied", {
 
 test_that("print methods for fr_tdr", {
   skip_on_ci()
-  skip_on_os(os = "windows")
   d_fr <-
     mtcars |>
     tibble::as_tibble() |>

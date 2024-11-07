@@ -41,7 +41,6 @@ test_that("fr_schema works", {
 
 test_that("fr_schema printing", {
   skip_on_ci()
-  skip_on_os(os = "windows")
   withr::with_options(list(width = 80), {
     read_fr_tdr(fs::path_package("fr", "hamilton_poverty_2020"))@schema |>
       expect_snapshot()

@@ -1,4 +1,5 @@
 fr_tdr <- S7::new_class(
+  package = NULL,
   "fr_tdr",
   parent = S7::class_data.frame,
   properties = list(
@@ -62,7 +63,7 @@ S7::method(as_fr_tdr, S7::class_data.frame) <- function(x, ..., .template = NULL
         .init = d_tdr)
     S7::props(out) <- S7::props(.template)[c("name", "version", "title", "homepage", "description")]
   }
-  
+
   return(out)
 }
 
@@ -113,10 +114,6 @@ as_list <- S7::new_generic("as_list", "x")
 
 S7::method(as_list, fr_tdr) <- function(x, ...) {
   as.list(x)
-}
-
-S7::method(summary, fr_tdr) <- function(x, ...) {
-  summary(S7::convert(d, S7::class_data.frame))
 }
 
 S7::method(print, fr_tdr) <- function(x, ...) {
